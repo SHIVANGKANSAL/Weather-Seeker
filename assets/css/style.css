@@ -1,0 +1,695 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+#currentLocationTitle {
+    /* border: 1px solid black; */
+    /* padding-top: 20px; */
+    padding-left: 30px;
+    padding-bottom: 0;
+    line-height: 40px;
+    font-family: 'Patrick Hand', cursive;
+    text-transform: uppercase;
+    /* margin-top: 2%; */
+    text-shadow: 0.5px 1px 1px #000;
+    color: #fff;
+}
+
+#youtubeText {
+    text-shadow: 0.5px 1px 1px #000;
+    color: #fff;
+    font-family: 'Patrick Hand', cursive;
+    text-transform: uppercase;
+    padding-right: 35px;
+    padding-top: 15px;
+}
+
+.col-auto {
+    padding-left:10px;
+    padding-right: 10px;
+}
+
+#buttonID {
+    background: rgb(2,0,36);
+    background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#00d4ff",GradientType=1);
+    height: 50px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    width: 150px;
+    padding: auto;
+    font-weight: bold;
+    border-radius: 50px;
+    color: #fff;
+    border-color: #fff;
+    cursor: pointer;
+}
+
+.background, #landing {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.7;
+}
+#rightColumn {
+    height: 100%;
+    font-family: 'Patrick Hand', cursive;
+    background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    width: 18%; 
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-left: 5px;
+    padding-top: 15px;
+}
+.row {
+    width: 82%;
+}
+.container.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* border: 1px solid black; */
+    background-color: transparent;
+    color: #000;
+    /* height: 50%; */
+    width: 75%;
+}
+#appHeader, #currentDateTime {
+    margin-left: 45px;
+    margin-top: 3%;
+    font-size: 35px;
+    padding: 0;
+    font-family: 'Patrick Hand', cursive;
+    text-transform: uppercase;
+    text-shadow: 0.5px 1px 1px #000;
+    color: #fff;
+}
+#currentDateTime {
+    padding-right: 40px;
+}
+#appHeader {
+    margin-left: 50px;
+}
+#youtubePlayer {
+    padding: 0px;
+    border: 2px solid #444;
+}
+
+#youtubeApp {
+    text-align: right;
+    padding-right: 1%;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.btn-hover, .submit {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px;
+    height: 50px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover, .submit:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus, .submit:focus {
+    outline: none;
+}
+
+.playlistTitle.btn-hover, .submit {
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    /* box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75); */
+    /* opacity: 1.0; */
+}
+
+.playlistTitle{
+    text-transform: capitalize;
+    border: 1px solid #fff;
+    width: 230px;
+    opacity: 0.8;
+    font-family: 'Patrick Hand', cursive;
+}
+.submit {
+    height: 50px;
+    font-size: 20px;
+    width: 150px;
+    padding: auto;
+    margin-top: 10px;
+    border-radius: 50px;
+    margin-left: 0;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    border: 1px solid #fff;
+    font-family: 'Patrick Hand', cursive;
+    cursor: pointer;
+}
+
+/* .container {
+    color: #000;
+} */
+.weatherMain {
+    color: #000;
+    
+}
+/* rain css */
+/* html {
+    height: 100%;
+} */
+
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #111119, #111119);
+}
+
+.rain {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.rain.back-row {
+    display: none;
+    z-index: -1;
+    bottom: 60px;
+    opacity: 0.7;
+}
+
+body.back-row-toggle .rain.back-row {
+display: block;
+}
+
+.drop {
+    position: absolute;
+    bottom: 100%;
+    width: 30px;
+    height: 120px;
+    pointer-events: none;
+    animation: drop 0.2s linear infinite;
+}
+
+@keyframes drop {
+0% {
+    transform: translateY(0vh);
+}
+75% {
+    transform: translateY(90vh);
+}
+100% {
+    transform: translateY(90vh);
+}
+}
+
+.stem {
+    width: 3px;
+    height: 60%;
+    margin-left: 12px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
+    animation: stem 0.5s linear infinite;
+}
+
+@keyframes stem {
+0% {
+    opacity: 1;
+}
+65% {
+    opacity: 1;
+}
+75% {
+    opacity: 0;
+}
+100% {
+    opacity: 0;
+}
+}
+
+.splat {
+    width: 15px;
+    height: 16px;
+    border-top: 2px dotted rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    opacity: 1;
+    transform: scale(0);
+    animation: splat 0.5s linear infinite;
+    display: none;
+}
+
+body.splat-toggle .splat {
+display: block;
+}
+
+@keyframes splat {
+0% {
+    opacity: 1;
+    transform: scale(0);
+}
+80% {
+    opacity: 1;
+    transform: scale(0);
+}
+90% {
+    opacity: 0.5;
+    transform: scale(1);
+}
+100% {
+    opacity: 0;
+    transform: scale(1.5);
+}
+}
+
+.toggles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.toggle {
+    position: absolute;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 51px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle:hover {
+background-color: rgba(255, 255, 255, 0.25);
+}
+
+.toggle:active {
+background-color: rgba(255, 255, 255, 0.3);
+}
+
+.toggle.active {
+background-color: rgba(255, 255, 255, 0.4);
+}
+
+.splat-toggle {
+top: 20px;
+}
+
+.back-row-toggle {
+    top: 90px;
+    line-height: 12px;
+    padding-top: 14px;
+}
+
+.single-toggle {
+    top: 160px;
+}
+
+body.single-toggle .drop {
+    display: none;
+}
+
+body.single-toggle .drop:nth-child(10) {
+    display: block;
+}
+/* sun css */
+.sun { 
+position: absolute;
+    top:0;
+    left:0;
+    right:1%;
+    bottom:50%;
+    margin: auto;  
+    width:70px;
+    height:70px;
+    border-radius:50%;	
+    background:white;
+    opacity:0.9;			
+    box-shadow: 0px 0px 40px 15px white;  
+}
+
+.ray_box {
+position: absolute;
+margin: auto;
+    top:0px;
+    left:0;
+    right:0;
+    bottom:0;	
+width:70px;  
+-webkit-animation: ray_anim 120s linear infinite;
+animation: ray_anim 120s linear infinite;
+}
+.ray {  
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%); 
+    margin-left:10px;
+    border-radius:80% 80% 0 0;
+    position:absolute;
+    opacity:0.1;
+}
+
+.ray1 {    
+    height:170px;
+    width:30px;
+    -webkit-transform: rotate(180deg);
+    top:-175px;
+    left: 15px;
+}
+.ray2 {
+    height:100px;
+    width:8px;
+    -webkit-transform: rotate(220deg);
+    top:-90px;
+    left: 75px;
+}
+.ray3 {
+    height:170px;
+    width:50px;
+    -webkit-transform: rotate(250deg);
+    top:-80px;
+    left: 100px;
+}
+.ray4 {
+    height:120px;
+    width:14px;
+    -webkit-transform: rotate(305deg);
+    top:30px;
+    left: 100px;
+}
+.ray5 {
+    height:140px;
+    width:30px;
+    -webkit-transform: rotate(-15deg);
+    top:60px;
+    left: 40px;
+}
+.ray6 {
+    height:90px;
+    width:50px;
+    -webkit-transform: rotate(30deg);
+    top:60px;
+    left: -40px;
+}
+.ray7 {
+    height:180px;
+    width:10px;
+    -webkit-transform: rotate(70deg);
+    top:-35px;
+    left: -40px;
+}
+.ray8 {
+    height:120px;
+    width:30px;
+    -webkit-transform: rotate(100deg);
+    top:-45px;
+    left:-90px;
+}
+.ray9 {
+    height:80px;
+    width:10px;
+    -webkit-transform: rotate(120deg);
+    top:-65px;
+    left:-60px;
+}
+.ray10 {
+    height:190px;
+    width:23px;
+    -webkit-transform: rotate(150deg);
+    top:-185px;
+    left: -60px;
+}
+@-webkit-keyframes ray_anim { 
+        0% { -webkit-transform: rotate(0deg); transform: rotate(0deg);}    
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+}
+/* end sun styling */
+
+/* customizable snowflake styling */
+.snowflake {
+    color: #fff;
+    font-size: 1.5em;
+    font-family: Arial;
+    text-shadow: 0 0 1px #000;
+}
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+/* end snowflake styling */
+/* card styling */
+.mainWeatherCard {
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: 30%;
+    font-family: 'Patrick Hand', cursive;
+    text-transform: uppercase;
+}
+#temperatureDiv, #descriptionDiv, #windSpeedDiv, #humidityDiv, #sunriseDiv, #sunsetDiv {
+    color: #fff;
+    font-family: 'Patrick Hand', cursive;
+    line-height: 45px;
+    text-shadow: 0.5px 1px 1px #000;
+    text-transform: uppercase;
+}
+#temperatureDiv {
+    font-size: 60px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    font-family: 'Patrick Hand', cursive;
+}
+
+#descriptionDiv {
+    font-size: 40px;
+    font-family: 'Patrick Hand', cursive;
+}
+#humidityDiv, #sunriseDiv, #sunsetDiv, #windSpeedDiv {
+    font-size: 30px;
+    font-family: 'Patrick Hand', cursive;
+}
+div.card-body {
+    width: 700px;
+}
+
+#vidList {
+    padding-right: 25px;
+}
+/* fog css */
+body {
+    overflow-x: hidden; 
+    background: #000;
+}
+
+/* FOG ANIMATION */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #000;
+  background: rgba(0, 0, 0, 1);
+  overflow-x: hidden; 
+}
+
+/* ---------- Fog ---------- */
+.fogwrapper {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  -webkit-filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+  filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+}
+#foglayer_01, #foglayer_02, #foglayer_03 {
+  height: 100%;
+  position: absolute;
+  width: 200%;
+}
+#foglayer_01 .image01, #foglayer_01 .image02,
+#foglayer_02 .image01, #foglayer_02 .image02,
+#foglayer_03 .image01, #foglayer_03 .image02 {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+#foglayer_01 {
+  -webkit-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+  -moz-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+  animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+}
+#foglayer_02, #foglayer_03 {
+  -webkit-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+  -moz-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+  animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+}
+
+/* ---------- Moving Fog ---------- */
+/*
+  'size: cover' || 'size: 100%'; results remain the same
+  'attachment: scroll' can be added or removed; results remain the same
+  'attachment: fixed' causing unexpected results in Chrome
+  'repeat-x' || 'no-repeat'; results remain the same
+*/ 
+#foglayer_01 .image01, #foglayer_01 .image02 {
+  background: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png") center center/cover no-repeat transparent;
+}
+#foglayer_02 .image01, #foglayer_02 .image02,
+#foglayer_03 .image01, #foglayer_03 .image02{
+  background: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog2.png") center center/cover no-repeat transparent;
+}
+
+/* ---------- Keyframe Layer 1 ---------- */
+@-webkit-keyframes foglayer_01_opacity {
+    0% { opacity: .1; }
+    22% { opacity: .5; }
+    40% { opacity: .28; }
+    58% { opacity: .4; }
+    80% { opacity: .16; }
+    100% { opacity: .1; }
+}
+@-moz-keyframes foglayer_01_opacity {
+    0% { opacity: .1; }
+    22% { opacity: .5; }
+    40% { opacity: .28; }
+    58% { opacity: .4; }
+    80% { opacity: .16; }
+    100% { opacity: .1; }
+}
+@-o-keyframes foglayer_01_opacity {
+    0% { opacity: .1; }
+    22% { opacity: .5; }
+    40% { opacity: .28; }
+    58% { opacity: .4; }
+    80% { opacity: .16; }
+    100% { opacity: .1; }
+}
+@keyframes foglayer_01_opacity {
+  0% { opacity: .1; }
+  22% { opacity: .5; }
+  40% { opacity: .28; }
+  58% { opacity: .4; }
+  80% { opacity: .16; }
+  100% { opacity: .1; }
+}
+/* ---------- Keyframe Layer 2 ---------- */
+@-webkit-keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+@-moz-keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+@-o-keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+@keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+/* ---------- Keyframe Layer 3 ---------- */
+@-webkit-keyframes foglayer_03_opacity {
+  0% { opacity: .8 }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+@-moz-keyframes foglayer_03_opacity {
+  0% { opacity: .8 }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+@-o-keyframes foglayer_03_opacity {
+  0% { opacity: .8 }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+@keyframes foglayer_03_opacity {
+  0% { opacity: .8; }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+/* ---------- Keyframe moveMe ---------- */
+@-webkit-keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@-moz-keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@-o-keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+@media only screen
+  and (min-width: 280px)
+  and (max-width: 767px) {
+    #foglayer_01 .image01, #foglayer_01 .image02,
+    #foglayer_02 .image01, #foglayer_02 .image02,
+    #foglayer_03 .image01, #foglayer_03 .image02 {
+      width: 100%;
+    }
+  }
+
+  /* make the weather forecast div overflow */
+  #accordionEx{
+   
+    height: 500px;
+    overflow: auto;
+   
+  }
+
