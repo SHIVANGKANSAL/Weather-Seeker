@@ -1,4 +1,4 @@
-# WeatherSpot
+# Weather Seeker ☁🌡
 
 ### [Weather Seeker](https://shivangkansal.github.io/Weather-Seeker/ "Weather Seeker") is a weather app that spices up your daily routine by suggesting music that relates to the mood that the current weather might induce. 
 
